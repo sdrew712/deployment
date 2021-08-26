@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 app.get("/", function(req, res){
-  res.sendFile(path.join(__dirname, "public"));
+  res.sendFile(path.join(express.static(__dirname, "public")));
 });
 
 const port = process.env.PORT || 4005;
